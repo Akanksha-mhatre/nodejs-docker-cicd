@@ -67,6 +67,59 @@ The Docker image is automatically published to GitHub Container Registry after a
 Result
 This project demonstrates a basic CI/CD automation process where code changes pushed to GitHub automatically trigger testing, Docker image creation, and image publishing.
 
+## Task 2: Jenkins CI/CD Pipeline
+
+### Objective
+Created a Jenkins pipeline to automate the build, test, and deployment of a Node.js application using Docker.
+
+### Tools Used
+- Jenkins
+- Docker
+- GitHub
+- Node.js
+- Git
+
+### Pipeline Stages
+1. Checkout SCM
+2. Install Dependencies
+3. Test
+4. Build Docker Image
+5. Deploy
+
+### Pipeline Workflow
+
+GitHub Commit
+↓
+Jenkins SCM Polling
+↓
+Checkout Source Code
+↓
+Install Dependencies
+↓
+Run Tests
+↓
+Build Docker Image
+↓
+Deploy Application
+
+### Automatic Trigger
+Jenkins was configured with Poll SCM:
+
+H/5 * * * *
+
+This checks the GitHub repository for new commits and automatically starts the pipeline when a change is detected.
+
+### Result
+The Jenkins pipeline completed successfully with all stages passing:
+
+- Checkout SCM ✅
+- Install Dependencies ✅
+- Test ✅
+- Build Docker Image ✅
+- Deploy ✅
+
+Build #7 was automatically started by an SCM change.
+
 Author
 Akanksha Mhatre
 
