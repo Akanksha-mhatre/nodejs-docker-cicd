@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f nodejs-jenkins-app || true
-                    docker run -d -p 3001:3000 --name nodejs-jenkins-app nodejs-demo-app:jenkins
+                    docker run -d -p 3000:3000 --name nodejs-jenkins-app nodejs-demo-app:jenkins
                 '''
             }
         }
